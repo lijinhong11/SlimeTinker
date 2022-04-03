@@ -109,13 +109,15 @@ public class TinkersSmeltery extends TickingMenuBlock {
 
         Config c = BlockStorage.getLocationInfo(menu.getLocation());
 
-        for (String key : c.getKeys()) {
-            if (key.startsWith(TinkersSmelteryCache.METAL_LEVEL_PREFIX)) {
-                String id = key.replace(TinkersSmelteryCache.METAL_LEVEL_PREFIX, "");
-                int amount = Integer.parseInt(c.getString(key));
-                cache.getTankContent().put(id, amount);
+        try {
+            for (String key : c.getKeys()) {
+                if (key.startsWith(TinkersSmelteryCache.METAL_LEVEL_PREFIX)) {
+                    String id = key.replace(TinkersSmelteryCache.METAL_LEVEL_PREFIX, "");
+                    int amount = Integer.parseInt(c.getString(key));
+                    cache.getTankContent().put(id, amount);
+                }
             }
-        }
+        } catch (NullPointerException ignored) {}
 
         caches.put(b.getLocation(), cache);
         menu.addMenuOpeningHandler((player -> validateMultiblock(menu, player)));
