@@ -18,14 +18,14 @@ public final class TinkersMaterialsDynatech {
 
     private static final Map<String, TinkerMaterial> CM_MAP = new HashMap<>();
 
-    private static final TinkerMaterial STAINLESS_STEEL = new TinkerMaterial(Ids.STAINLESS_STEEL, SlimefunItem.getById("STAINLESS_STEEL_INGOT").getItem(), "#d1d1d1")
+    private static final TinkerMaterial STAINLESS_STEEL = new TinkerMaterial(Ids.STAINLESS_STEEL, SlimefunItem.getById("DT_STAINLESS_STEEL_INGOT").getItem(), "#d1d1d1")
         .setLiquidTexture(SkullTextures.ALLOY_SILVER)
         .setTraitToolHead(Traits.DYN_STAINLESS_STEEL_HEAD)
         .setTraitToolRod(Traits.DYN_STAINLESS_STEEL_ROD)
         .setTraitArmorPlates(Traits.DYN_STAINLESS_STEEL_PLATES)
         .setTraitArmorLinks(Traits.DYN_STAINLESS_STEEL_LINKS)
         .setFormNugget(Materials.NUGGET_CAST_STAINLESSSTEEL.getItemId())
-        .setFormIngot("STAINLESS_STEEL_INGOT")
+        .setFormIngot("DT_STAINLESS_STEEL_INGOT")
         .setFormBlock(Materials.BLOCK_CAST_STAINLESSSTEEL.getItemId())
         .addAlloyRecipe(
             TinkersMaterialsCore.getCmMap().get(Ids.IRON).getLiquidItemStack(2),
@@ -58,12 +58,12 @@ public final class TinkersMaterialsDynatech {
         .setFormDust("GHOSTLY_ESSENCE")
         .build();
 
-    private static final TinkerMaterial TESSERACT = new TinkerMaterial(Ids.TESSERACT, SlimefunItem.getById("TESSERACTING_OBJECT").getItem(), "#c7ba9f")
+    private static final TinkerMaterial TESSERACT = new TinkerMaterial(Ids.TESSERACT, SlimefunItem.getById("TESSERACTING_OBJ").getItem(), "#c7ba9f")
         .setLiquidTexture(SkullTextures.ALLOY_TAN)
         .setTraitToolHead(Traits.DYN_TESSERACT_HEAD)
         .setTraitArmorPlates(Traits.DYN_TESSERACT_PLATES)
         .setTraitArmorLinks(Traits.DYN_TESSERACT_LINKS)
-        .setFormBlock("TESSERACTING_OBJECT")
+        .setFormBlock("TESSERACTING_OBJ")
         .build();
 
     static {
